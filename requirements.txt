@@ -1,0 +1,6 @@
+nessai
+bilby[gw]
+mcmc_infinity
+ipykernel
+corner
+matplotlib
