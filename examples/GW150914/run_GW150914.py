@@ -11,7 +11,7 @@ import os
 logger = bilby.core.utils.logger
 
 outdir = "outdir"
-label = "GW150914_nessai"
+label = "GW150914_nessai_debug"
 
 trigger_time = 1126259462.4
 detectors = ["H1", "L1"]
@@ -51,7 +51,7 @@ logger.info("Saving data plots to {}".format(outdir))
 bilby.core.utils.check_directory_exists_and_if_not_mkdir(outdir)
 ifo_list.plot_data(outdir=outdir, label=label)
 
-priors = bilby.gw.prior.BBHPriorDict(filename="GW150914.prior")
+priors = bilby.gw.prior.BBHPriorDict(filename="GW150914_debug.prior")
 
 priors["geocent_time"] = bilby.core.prior.Uniform(
     trigger_time - 0.1, trigger_time + 0.1, name="geocent_time"

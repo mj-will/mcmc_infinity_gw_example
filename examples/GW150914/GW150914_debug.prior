@@ -1,6 +1,5 @@
-chirp_mass = bilby.gw.prior.UniformInComponentsChirpMass(name='chirp_mass', minimum=25, maximum=35, unit='$M_{\odot}$')
-mass_ratio = bilby.gw.prior.UniformInComponentsMassRatio(name='mass_ratio', minimum=0.125, maximum=1)
-mass_1 = Constraint(name='mass_1', minimum=10, maximum=80)
+chirp_mass = Uniform(name='chirp_mass', minimum=25, maximum=35, unit='$M_{\odot}$')
+mass_ratio = Uniform(name='mass_ratio', minimum=0.125, maximum=1)
 chi_1 = Uniform(name='chi_1', minimum=-0.9, maximum=0.9)
 chi_2 = Uniform(name='chi_2', minimum=-0.9, maximum=0.9)
 luminosity_distance = PowerLaw(alpha=2, name='luminosity_distance', minimum=50, maximum=2000, unit='Mpc', latex_label='$d_L$')
